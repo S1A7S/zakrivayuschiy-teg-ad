@@ -1,18 +1,296 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Закрывающий тег — восемь заметок о пути в изучении вёрстки.">
+  <title>Закрывающий тег</title>
+  <link rel="icon" href="./icons/favicon.ico" sizes="32x32">
+  <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/animations.css">
+  <script src="./scripts/script.js" defer></script>
+</head>
+<body class="page">
+  <!-- Встроенный symbol позволяет use работать без локального сервера.
+       Его исходник также сохранён в icons/floppy.svg. -->
+  <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="floppy" viewBox="0 0 24 24">
+      <path fill="currentColor" fill-rule="evenodd" d="M2 2h17l3 3v17H2V2zm3 2v6h12V4H5zm0 10v6h14v-6H5zM12 4h3v4h-3V4z"/>
+    </symbol>
+  </svg>
+  <header class="header content-width">
+    <p class="header__logo" aria-hidden="true">&lt;/HTML&gt;</p>
+    <h1 class="header__title">Закрывающий тег</h1>
+  </header>
+  <main class="cards content-width" aria-label="Восемь этапов обучения">
+    <article class="card" aria-labelledby="title-memory">
+      <h2 class="card__title" id="title-memory">Фритрек и нулевой спринт: Подготовка к работе</h2>
+      <div class="card__media">
+        <!-- TODO IMAGE memory: замените src и alt своей локальной картинкой. -->
+        <img class="card__image image-memory" src="./images/placeholder.png" alt="Заглушка: пиксельный фургон на фоне гор и заката" width="700" height="700" loading="lazy">
+        <!-- TODO LABEL memory: одно-два слова о вашем состоянии. -->
+        <span class="card__label">&lt;старт&gt;</span>
+      </div>
+      <div class="card__body">
+        <!-- TODO COPY memory: сверьте вводный текст и заголовок с макетом. -->
+        <p class="card__text">Впереди — новый путь. Первые задания помогают разобраться в инструментах и подготовить рабочее место.</p>
+        <!-- TODO PERSONAL memory: замените этот абзац личным текстом. -->
+        <p class="card__text">Место для вашей истории о начале обучения: что привело вас на курс и чего вы ожидали.</p>
+        <div class="card__actions">
+          <button class="card__icon-button" type="button" aria-pressed="false" aria-label="Поставить лайк: Фритрек и нулевой спринт: Подготовка к работе">
+              <svg class="like-icon" viewBox="0 0 39 36" aria-hidden="true" focusable="false">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" fill-rule="evenodd" d="M6 6h9v3h9V6h9v3h3v12h-3v3h-3v3h-3v3h-3v3h-9v-3h-3v-3H9v-3H6v-3H3V9h3Z M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z"/>
+                  <path class="main-body" fill="transparent" fill-rule="evenodd" d="M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z M15 12h9v9h-9Z"/>
+                  <path class="core" fill="transparent" d="M15 12h9v9h-9Z"/>
+                </g>
+                <path class="sparks" fill="var(--animation-fill-color)" d="M0 0h3v3H0zM36 0h3v3h-3zM0 27h3v3H0zM36 27h3v3h-3zM18 0h3v3h-3zM0 15h3v3H0zM36 15h3v3h-3z"/>
+              </svg>
+          </button>
+          <button class="button card__like-button" type="button" aria-pressed="false">
+            <span class="button_text button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="title-start">
+      <h2 class="card__title" id="title-start">Спринт: Я — чистый лист</h2>
+      <div class="card__media">
+        <!-- TODO IMAGE start: замените src и alt своей локальной картинкой. -->
+        <img class="card__image image-start" src="./images/placeholder.png" alt="Заглушка: пиксельный фургон на фоне гор и заката" width="700" height="700" loading="lazy">
+        <!-- TODO LABEL start: одно-два слова о вашем состоянии. -->
+        <span class="card__label">&lt;интерес&gt;</span>
+      </div>
+      <div class="card__body">
+        <!-- TODO COPY start: сверьте вводный текст и заголовок с макетом. -->
+        <p class="card__text">Новая страница, первые теги и первые стили. Постепенно из отдельных строк появляется целая страница.</p>
+        <!-- TODO PERSONAL start: замените этот абзац личным текстом. -->
+        <p class="card__text">Место для ваших первых впечатлений: что удивило и какая маленькая победа особенно запомнилась.</p>
+        <div class="card__actions">
+          <button class="card__icon-button" type="button" aria-pressed="false" aria-label="Поставить лайк: Спринт: Я — чистый лист">
+              <svg class="like-icon" viewBox="0 0 39 36" aria-hidden="true" focusable="false">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" fill-rule="evenodd" d="M6 6h9v3h9V6h9v3h3v12h-3v3h-3v3h-3v3h-3v3h-9v-3h-3v-3H9v-3H6v-3H3V9h3Z M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z"/>
+                  <path class="main-body" fill="transparent" fill-rule="evenodd" d="M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z M15 12h9v9h-9Z"/>
+                  <path class="core" fill="transparent" d="M15 12h9v9h-9Z"/>
+                </g>
+                <path class="sparks" fill="var(--animation-fill-color)" d="M0 0h3v3H0zM36 0h3v3h-3zM0 27h3v3H0zM36 27h3v3h-3zM18 0h3v3h-3zM0 15h3v3H0zM36 15h3v3h-3z"/>
+              </svg>
+          </button>
+          <button class="button card__like-button" type="button" aria-pressed="false">
+            <span class="button_text button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="title-doubt">
+      <h2 class="card__title" id="title-doubt">Спринт: А если не получится?</h2>
+      <div class="card__media">
+        <!-- TODO IMAGE doubt: замените src и alt своей локальной картинкой. -->
+        <img class="card__image image-doubt" src="./images/placeholder.png" alt="Заглушка: пиксельный фургон на фоне гор и заката" width="700" height="700" loading="lazy">
+        <!-- TODO LABEL doubt: одно-два слова о вашем состоянии. -->
+        <span class="card__label">&lt;поиск&gt;</span>
+      </div>
+      <div class="card__body">
+        <!-- TODO COPY doubt: сверьте вводный текст и заголовок с макетом. -->
+        <p class="card__text">Когда правил становится больше, полезно замедлиться и разбирать задачу по одному небольшому шагу.</p>
+        <!-- TODO PERSONAL doubt: замените этот абзац личным текстом. -->
+        <p class="card__text">Место для ваших сомнений: с какой трудностью вы столкнулись и что помогло продолжить.</p>
+        <div class="card__actions">
+          <button class="card__icon-button" type="button" aria-pressed="false" aria-label="Поставить лайк: Спринт: А если не получится?">
+              <svg class="like-icon" viewBox="0 0 39 36" aria-hidden="true" focusable="false">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" fill-rule="evenodd" d="M6 6h9v3h9V6h9v3h3v12h-3v3h-3v3h-3v3h-3v3h-9v-3h-3v-3H9v-3H6v-3H3V9h3Z M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z"/>
+                  <path class="main-body" fill="transparent" fill-rule="evenodd" d="M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z M15 12h9v9h-9Z"/>
+                  <path class="core" fill="transparent" d="M15 12h9v9h-9Z"/>
+                </g>
+                <path class="sparks" fill="var(--animation-fill-color)" d="M0 0h3v3H0zM36 0h3v3h-3zM0 27h3v3H0zM36 27h3v3h-3zM18 0h3v3h-3zM0 15h3v3H0zM36 15h3v3h-3z"/>
+              </svg>
+          </button>
+          <button class="button card__like-button" type="button" aria-pressed="false">
+            <span class="button_text button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="title-discovery">
+      <h2 class="card__title" id="title-discovery">Спринт: Погоня за идеалом</h2>
+      <div class="card__media">
+        <!-- TODO IMAGE discovery: замените src и alt своей локальной картинкой. -->
+        <img class="card__image image-discovery" src="./images/placeholder.png" alt="Заглушка: пиксельный фургон на фоне гор и заката" width="700" height="700" loading="lazy">
+        <!-- TODO LABEL discovery: одно-два слова о вашем состоянии. -->
+        <span class="card__label">&lt;открытие&gt;</span>
+      </div>
+      <div class="card__body">
+        <!-- TODO COPY discovery: сверьте вводный текст и заголовок с макетом. -->
+        <p class="card__text">Детали обретают значение: отступы, размеры текста и поведение страницы на разных экранах.</p>
+        <!-- TODO PERSONAL discovery: замените этот абзац личным текстом. -->
+        <p class="card__text">Место для вашего открытия: какой приём изменил ваш подход к вёрстке.</p>
+        <div class="card__actions">
+          <button class="card__icon-button" type="button" aria-pressed="false" aria-label="Поставить лайк: Спринт: Погоня за идеалом">
+              <svg class="like-icon" viewBox="0 0 39 36" aria-hidden="true" focusable="false">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" fill-rule="evenodd" d="M6 6h9v3h9V6h9v3h3v12h-3v3h-3v3h-3v3h-3v3h-9v-3h-3v-3H9v-3H6v-3H3V9h3Z M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z"/>
+                  <path class="main-body" fill="transparent" fill-rule="evenodd" d="M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z M15 12h9v9h-9Z"/>
+                  <path class="core" fill="transparent" d="M15 12h9v9h-9Z"/>
+                </g>
+                <path class="sparks" fill="var(--animation-fill-color)" d="M0 0h3v3H0zM36 0h3v3h-3zM0 27h3v3H0zM36 27h3v3h-3zM18 0h3v3h-3zM0 15h3v3H0zM36 15h3v3h-3z"/>
+              </svg>
+          </button>
+          <button class="button card__like-button" type="button" aria-pressed="false">
+            <span class="button_text button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="title-support">
+      <h2 class="card__title" id="title-support">Спринт: О тех, кто рядом</h2>
+      <div class="card__media">
+        <!-- TODO IMAGE support: замените src и alt своей локальной картинкой. -->
+        <img class="card__image image-support" src="./images/placeholder.png" alt="Заглушка: пиксельный фургон на фоне гор и заката" width="700" height="700" loading="lazy">
+        <!-- TODO LABEL support: одно-два слова о вашем состоянии. -->
+        <span class="card__label">&lt;поддержка&gt;</span>
+      </div>
+      <div class="card__body">
+        <!-- TODO COPY support: сверьте вводный текст и заголовок с макетом. -->
+        <p class="card__text">Обсуждение сложной задачи помогает увидеть её под другим углом. Иногда один вопрос открывает путь к решению.</p>
+        <!-- TODO PERSONAL support: замените этот абзац личным текстом. -->
+        <p class="card__text">Место для истории о поддержке: кто помог вам и за что вы хотели бы сказать спасибо.</p>
+        <div class="card__actions">
+          <button class="card__icon-button" type="button" aria-pressed="false" aria-label="Поставить лайк: Спринт: О тех, кто рядом">
+              <svg class="like-icon" viewBox="0 0 39 36" aria-hidden="true" focusable="false">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" fill-rule="evenodd" d="M6 6h9v3h9V6h9v3h3v12h-3v3h-3v3h-3v3h-3v3h-9v-3h-3v-3H9v-3H6v-3H3V9h3Z M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z"/>
+                  <path class="main-body" fill="transparent" fill-rule="evenodd" d="M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z M15 12h9v9h-9Z"/>
+                  <path class="core" fill="transparent" d="M15 12h9v9h-9Z"/>
+                </g>
+                <path class="sparks" fill="var(--animation-fill-color)" d="M0 0h3v3H0zM36 0h3v3h-3zM0 27h3v3H0zM36 27h3v3h-3zM18 0h3v3h-3zM0 15h3v3H0zM36 15h3v3h-3z"/>
+              </svg>
+          </button>
+          <button class="button card__like-button" type="button" aria-pressed="false">
+            <span class="button_text button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="title-practice">
+      <h2 class="card__title" id="title-practice">Спринт: Обходные стратегии</h2>
+      <div class="card__media">
+        <!-- TODO IMAGE practice: замените src и alt своей локальной картинкой. -->
+        <img class="card__image image-practice" src="./images/placeholder.png" alt="Заглушка: пиксельный фургон на фоне гор и заката" width="700" height="700" loading="lazy">
+        <!-- TODO LABEL practice: одно-два слова о вашем состоянии. -->
+        <span class="card__label">&lt;практика&gt;</span>
+      </div>
+      <div class="card__body">
+        <!-- TODO COPY practice: сверьте вводный текст и заголовок с макетом. -->
+        <p class="card__text">Один результат можно получить разными способами. Практика учит выбирать решение и понимать его ограничения.</p>
+        <!-- TODO PERSONAL practice: замените этот абзац личным текстом. -->
+        <p class="card__text">Место для истории о решении: какой подход не сработал и как вы нашли другой.</p>
+        <div class="card__actions">
+          <button class="card__icon-button" type="button" aria-pressed="false" aria-label="Поставить лайк: Спринт: Обходные стратегии">
+              <svg class="like-icon" viewBox="0 0 39 36" aria-hidden="true" focusable="false">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" fill-rule="evenodd" d="M6 6h9v3h9V6h9v3h3v12h-3v3h-3v3h-3v3h-3v3h-9v-3h-3v-3H9v-3H6v-3H3V9h3Z M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z"/>
+                  <path class="main-body" fill="transparent" fill-rule="evenodd" d="M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z M15 12h9v9h-9Z"/>
+                  <path class="core" fill="transparent" d="M15 12h9v9h-9Z"/>
+                </g>
+                <path class="sparks" fill="var(--animation-fill-color)" d="M0 0h3v3H0zM36 0h3v3h-3zM0 27h3v3H0zM36 27h3v3h-3zM18 0h3v3h-3zM0 15h3v3H0zM36 15h3v3h-3z"/>
+              </svg>
+          </button>
+          <button class="button card__like-button" type="button" aria-pressed="false">
+            <span class="button_text button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="title-pause">
+      <h2 class="card__title" id="title-pause">Спринт: Когда опускаются руки</h2>
+      <div class="card__media">
+        <!-- TODO IMAGE pause: замените src и alt своей локальной картинкой. -->
+        <img class="card__image image-pause" src="./images/placeholder.png" alt="Заглушка: пиксельный фургон на фоне гор и заката" width="700" height="700" loading="lazy">
+        <!-- TODO LABEL pause: одно-два слова о вашем состоянии. -->
+        <span class="card__label">&lt;пауза&gt;</span>
+      </div>
+      <div class="card__body">
+        <!-- TODO COPY pause: сверьте вводный текст и заголовок с макетом. -->
+        <p class="card__text">Пауза тоже может быть частью работы. После отдыха проще вернуться к задаче и заметить упущенную деталь.</p>
+        <!-- TODO PERSONAL pause: замените этот абзац личным текстом. -->
+        <p class="card__text">Место для вашей истории об отдыхе: как вы восстанавливаете силы и возвращаетесь к учёбе.</p>
+        <div class="card__actions">
+          <button class="card__icon-button" type="button" aria-pressed="false" aria-label="Поставить лайк: Спринт: Когда опускаются руки">
+              <svg class="like-icon" viewBox="0 0 39 36" aria-hidden="true" focusable="false">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" fill-rule="evenodd" d="M6 6h9v3h9V6h9v3h3v12h-3v3h-3v3h-3v3h-3v3h-9v-3h-3v-3H9v-3H6v-3H3V9h3Z M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z"/>
+                  <path class="main-body" fill="transparent" fill-rule="evenodd" d="M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z M15 12h9v9h-9Z"/>
+                  <path class="core" fill="transparent" d="M15 12h9v9h-9Z"/>
+                </g>
+                <path class="sparks" fill="var(--animation-fill-color)" d="M0 0h3v3H0zM36 0h3v3h-3zM0 27h3v3H0zM36 27h3v3h-3zM18 0h3v3h-3zM0 15h3v3H0zM36 15h3v3h-3z"/>
+              </svg>
+          </button>
+          <button class="button card__like-button" type="button" aria-pressed="false">
+            <span class="button_text button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" aria-labelledby="title-finish">
+      <h2 class="card__title" id="title-finish">«Сейчас я здесь»</h2>
+      <div class="card__media">
+        <!-- TODO IMAGE finish: замените src и alt своей локальной картинкой. -->
+        <img class="card__image image-finish" src="./images/placeholder.png" alt="Заглушка: пиксельный фургон на фоне гор и заката" width="700" height="700" loading="lazy">
+        <!-- TODO LABEL finish: одно-два слова о вашем состоянии. -->
+        <span class="card__label">&lt;продолжение&gt;</span>
+      </div>
+      <div class="card__body">
+        <!-- TODO COPY finish: сверьте вводный текст и заголовок с макетом. -->
+        <p class="card__text">Этот этап завершается, а накопленные знания остаются. Впереди — новые страницы, задачи и идеи.</p>
+        <!-- TODO PERSONAL finish: замените этот абзац личным текстом. -->
+        <p class="card__text">Место для итоговой записи: чему вы научились и что хотите попробовать дальше.</p>
+        <div class="card__actions">
+          <button class="card__icon-button" type="button" aria-pressed="false" aria-label="Поставить лайк: Сейчас я здесь">
+              <svg class="like-icon" viewBox="0 0 39 36" aria-hidden="true" focusable="false">
+                <g class="heart">
+                  <path class="contour" fill="var(--contour-color)" fill-rule="evenodd" d="M6 6h9v3h9V6h9v3h3v12h-3v3h-3v3h-3v3h-3v3h-9v-3h-3v-3H9v-3H6v-3H3V9h3Z M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z"/>
+                  <path class="main-body" fill="transparent" fill-rule="evenodd" d="M6 9v12h3v3h3v3h3v3h9v-3h3v-3h3v-3h3V9h-9v3h-9V9Z M15 12h9v9h-9Z"/>
+                  <path class="core" fill="transparent" d="M15 12h9v9h-9Z"/>
+                </g>
+                <path class="sparks" fill="var(--animation-fill-color)" d="M0 0h3v3H0zM36 0h3v3h-3zM0 27h3v3H0zM36 27h3v3h-3zM18 0h3v3h-3zM0 15h3v3H0zM36 15h3v3h-3z"/>
+              </svg>
+          </button>
+          <button class="button card__like-button" type="button" aria-pressed="false">
+            <span class="button_text button__text">Like</span>
+          </button>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="footer content-width">
+    <button class="button save-button" type="button" aria-haspopup="dialog" aria-controls="save-dialog">
+      <svg class="button__icon" aria-hidden="true" focusable="false"><use href="#floppy"/></svg>
+      <span class="button_text button__text">Сохранить на память</span>
+    </button>
+  </footer>
+  <dialog class="dialog" id="save-dialog" aria-labelledby="dialog-title">
+    <svg class="dialog__icon" aria-hidden="true" focusable="false"><use href="#floppy"/></svg>
+    <p id="dialog-title">Вставьте дискету, чтобы продолжить</p>
+    <form class="dialog__form" method="dialog">
+      <button class="button dialog__close" type="submit" autofocus>
+        <span class="button_text button__text">ОК</span>
+      </button>
+    </form>
+  </dialog>
+</body>
 </html>

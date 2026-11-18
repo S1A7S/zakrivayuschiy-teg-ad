@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Этот symbol также встроен в index.html для работы через file://. -->
+  <symbol id="floppy" viewBox="0 0 24 24">
+    <path fill="currentColor" fill-rule="evenodd"
+      d="M2 2h17l3 3v17H2V2zm3 2v6h12V4H5zm0 10v6h14v-6H5zM12 4h3v4h-3V4z"/>
+  </symbol>
+</svg>
